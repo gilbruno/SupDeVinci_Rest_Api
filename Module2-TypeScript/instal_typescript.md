@@ -67,4 +67,71 @@ Remember, it's important to always refer to the official repositories or website
 
 - NVM: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 - NVM-Windows: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
+
+<br><br>
+
+
+# Installing Visual Studio Code (VS Code)
+
+Visual Studio Code is a free source-code editor made by Microsoft for Windows, Linux, and macOS. Below are the installation instructions for these platforms:
+
+## 1. MacOS
+
+### Prerequisites:
+- A Mac running macOS 10.10 (Yosemite) or later.
+
+### Steps:
+1. Go to the [official VS Code download page](https://code.visualstudio.com/Download).
+2. Click on the **Mac** download link.
+3. Once the `.zip` file is downloaded, unzip it.
+4. Drag `Visual Studio Code.app` to the `Applications` folder, making it available in the Launchpad.
+5. To launch VS Code, open Launchpad and click on the Visual Studio Code icon.
+
+*Optional*: Add to the Dock by right-clicking on the icon in the Dock and choosing `Options > Keep in Dock`.
+
+## 2. Windows
+
+### Prerequisites:
+- A computer running Windows 7 or later.
+
+### Steps:
+1. Go to the [official VS Code download page](https://code.visualstudio.com/Download).
+2. Click on the **Windows** download link.
+3. Once the `.exe` file is downloaded, run the installer.
+4. Follow the prompts to complete the installation.
+5. Once installed, launch VS Code by searching for it or by clicking on its icon on the Desktop.
+
+## 3. Linux (Debian/Ubuntu)
+
+### Prerequisites:
+- A Debian or Ubuntu-based Linux distribution.
+
+### Steps:
+1. Update packages and install dependencies:
+   
+   ```bash
+   sudo apt update
+   sudo apt install software-properties-common apt-transport-https wget
+
+
+2. Import the Microsoft GPG key:
+
+```sh
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 ```
+
+3. Add the Visual Studio Code repository:
+
+```sh
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+```
+
+4. Install Visual Studio Code:
+
+
+```sh
+sudo apt update
+sudo apt install code
+```
+
+
