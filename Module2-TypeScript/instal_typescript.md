@@ -1,65 +1,70 @@
-# Introduction
+# Installation Guide for NVM and Node.js
 
-Follow these steps to install typescript
+## MacOS & Linux:
 
-# Node
+### Install NVM:
 
-## Windows
+1. Open your terminal.
+2. Install NVM using the following `curl` command:
 
-To install Node Version Manager (NVM) and Node.js on Windows, you'll want to use nvm-windows, which is a dedicated version of NVM tailored for the Windows environment. Here's how to do it:
+   ```sh
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+   ```
 
+   _Note: Always refer to the [official NVM repository](https://github.com/nvm-sh/nvm) for the latest version and installation script._
 
-1. Install nvm-windows
+3. Restart your terminal or run:
 
+   ```sh
+   export NVM_DIR="$HOME/.nvm"
+   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+   ```
 
-    1.1 Install nvm-windows
-Navigate to the nvm-windows GitHub repository's releases page or its official website. As of my last training data in September 2021, the official website was https://github.com/coreybutler/nvm-windows/releases.
+### Install Node.js:
 
-    1.2 Download the latest nvm-setup.zip or nvm-setup.exe from the releases.
+1. Once NVM is installed, you can install Node.js by running:
 
-    1.3 Run the installer you downloaded. This will guide you through the installation process.
+   ```sh
+   nvm install node
+   ```
 
-    1.4 After installation, restart your terminal or command prompt. To check if NVM is successfully installed, run:
+2. To use the installed version, run:
 
+   ```sh
+   nvm use node
+   ```
 
-    ```sh
-    nvm version
-    ```
+## Windows:
 
+### Install NVM:
 
-2.  Install Node.js using 'nvm-windows'
+1. For Windows, there's a separate project called 'nvm-windows'. First, you should uninstall any existing versions of Node.js before proceeding.
+2. Download the installer from [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases).
+3. Run the installer.
+4. Follow the on-screen instructions.
 
-    Now that you've installed nvm-windows, you can easily install Node.js:
+### Install Node.js:
 
-    2.1 To see the available versions of Node.js, run:
+1. Open the command prompt or PowerShell.
+2. Install Node.js using:
 
-    ```sh
-    nvm list available
-    ```
+   ```sh
+   nvm install latest
+   ```
 
-    2.2 <br>To install a specific version of Node.js, use the nvm install command followed by the version number. For example, to install Node.js version 14.17.0, you would run:
+3. To switch to the installed version:
 
-    ```sh
-    nvm install 18.8.0 
-    ```
+   ```sh
+   nvm use <version>
+   ```
 
-    2.3 <br>After installation, you can set the installed version as the default using:
+   Replace `<version>` with the version number you installed.
 
-    ```sh
-    nvm use 16.16.0 
-    ```
+---
 
-    2.4 <br>Check the installed version of Node.js and npm:
+Remember, it's important to always refer to the official repositories or websites for the most up-to-date instructions and versions:
 
-    ```sh
-    node -v
-    ```
-
-    2.5 <br>
-    If you want to install another version of Node.js, simply repeat the nvm install command with the desired version. You can then switch between installed versions using the nvm use command.
-
-
-
-
-
-
+- NVM: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+- NVM-Windows: [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
+```
