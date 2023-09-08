@@ -134,4 +134,53 @@ sudo apt update
 sudo apt install code
 ```
 
+# Installing TypeScript locally
+
+1. Init _NPM_
+
+```sh
+npm init -y
+```
+
+2. Install TS package 
+
+```sh
+npm install --save-dev typescript
+```
+
+3. Create ts.config
+
+```sh
+npx tsconfig.json
+```
+
+By default, ts files must be in _src_ dir according to _tsconfig.json_
+
+4. Update _package.json_
+
+in _scripts_, add : 
+
+```json
+"build": "npx tsc"
+```
+
+5. Create a TS test file
+
+
+6. Compile it
+
+
+```json
+npm run build
+```
+
+The Js file created is visible in the _dist_ dir according to _tsconfig_ file 
+
+
+
+
+
+
+
+
 
