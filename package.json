@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node-dev src/main.ts"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,11 @@
   "homepage": "https://github.com/gilbruno/Ynov_Rest_Api#readme",
   "devDependencies": {
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.2.5",
+    "@nestjs/core": "^10.2.5",
+    "@nestjs/platform-express": "^10.2.5",
+    "reflect-metadata": "^0.1.13"
   }
 }
