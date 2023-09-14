@@ -15,8 +15,48 @@
 
 ### Création App Controller
 
+Dans 1 fichier main.ts à la racien de _src_
+
+
+```ts
+import { Controller, Get, Module } from "@nestjs/common";
+import { NestFactory } from "@nestjs/core";
+
+@Controller()
+class AppController {
+
+    @Get()
+    getRootRoute() {
+        return 'Hi Ynov !'
+    }
+
+}
+
+
+```
 
 ### Création App Module
 
+```ts
+@Module({
+    controllers: [AppController]
+})
+class AppModule {
+
+}
+```
+
 ### Bootstrap 
+
+
+```ts
+async function bootstrap() {
+    const app = await NestFactory.create(AppModule)
+
+    await app.listen(3000)
+}
+
+bootstrap();
+
+```
 
