@@ -15,7 +15,7 @@
 
 ### Création App Controller
 
-Dans 1 fichier main.ts à la racien de _src_
+Dans 1 fichier main.ts à la racine de _src_
 
 
 ```ts

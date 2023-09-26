@@ -123,3 +123,84 @@ let myInstagram = new Instagram('Reel', 'Mayfair')
 myInstagram.getSepiaFilter()
 
 
+
+
+function identity<Toto>(id: Toto): Toto {
+    return id
+}
+
+// const outputIdentity = identity<string>('Hi')
+
+
+const outputIdentity = identity(3)
+
+
+const scores: Array<number> = []
+
+const envVars : Record<string, string> = {
+    key: 'hg&*m|PR89',
+    secret: 'kd*m|&PI'
+}
+
+
+interface MyInterfaceIdentity {
+    <T>(arg: T): T
+}
+
+
+class GenericNumber<NumType> {
+    zeroValue: NumType;
+    add: (x: NumType, y: NumType) => NumType;
+  }
+   
+  let myGenericNumber = new GenericNumber<number>();
+  myGenericNumber.zeroValue = 0;
+  myGenericNumber.add = function (x, y) {
+    return x + y;
+  };
+
+
+interface Todo {
+    title: string
+    description: string
+}  
+
+
+const simpleTodo: Required<Todo> = {
+    title: 'First Todo',
+    description: 'First Todo desc'
+}
+
+
+
+interface CatInfo {
+    age: number;
+    breed: string;
+}
+ 
+type CatName = "miffy" | "boris" | "mordred";
+   
+const cats: Record<CatName, CatInfo> = {
+    miffy: { age: 10, breed: "Persian" },
+    boris: { age: 5, breed: "Maine Coon" },
+    mordred: { age: 16, breed: "British Shorthair" },
+};
+
+interface Todo {
+    title: string
+    description: string
+    completed: boolean
+}
+   
+type TodoPreview = Pick<Todo, "title" | "completed">
+type TodoPreview2 = Omit<Todo, "completed">
+
+const todo: TodoPreview = {
+    title: "Clean room",
+    completed: true,
+}
+
+const todo2: TodoPreview2 = {
+    title: 'Todo n°2',
+    description: 'Todo n°2 desc'
+}
