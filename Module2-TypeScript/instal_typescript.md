@@ -156,6 +156,19 @@ npx tsconfig.json
 
 By default, ts files must be in _src_ dir according to _tsconfig.json_
 
+If there is an error on this command, try with this one : 
+
+```sh
+npx tsc --init
+```
+
+Use this configuration for tsconfig.json :
+
+https://github.com/gilbruno/Ynov_Rest_Api/blob/main/tsconfig.json
+
+
+
+
 4. Update _package.json_
 
 in _scripts_, add : 
