@@ -24,28 +24,48 @@ This should display the version of Git you installed, confirming that the instal
 
 1. Install Visual Studio Code: If you haven't already, download and install VSCode from https://code.visualstudio.com/.
 
-2. Open VSCode and navigate to the Extensions view by clicking on the square icon in the sidebar or pressing Ctrl + Shift + X.
+2. In a terminal init a git local repo with the command 
 
-3. Search and Install the "GitHub Pull Requests and Issues" extension: This extension allows you to interact with GitHub directly from VSCode.
+```
+git init
+```
 
-4. Restart VSCode after installing the extension.
+3. To test a commit/push
 
-5. Connect VSCode to GitHub:
+ - Create a test file index.js with some code
+ - then "git add ." , then use the Commit/Push button to push the file
 
-   - Click on the source control icon in the sidebar (or press Ctrl + Shift + G).
-   -You'll see a "Sign in to GitHub" option. Click on it.
-    - Follow the prompts to authenticate with GitHub. This might involve getting a code from your browser and entering it in VSCode.
+If you have the error <br> : 
 
-6. Configure Git inside VSCode:
+Make sure you configure "user.name" and "user.email" in Git
 
-   - Press Ctrl + , to open settings.
-   - Search for "git" in the search bar. You can configure various Git settings from here, like enabling auto-fetch or setting your default commit message.
+Follow these steps : 
 
 
-7. Clone Repositories & Work:
+   - Open Command Prompt or Terminal: Depending on your OS, open your command line interface.
 
-    - To clone a repository, press F1, type Git: Clone, and then paste the URL of the GitHub repository.
-   - Make your changes, stage, commit, and push/pull—all directly from VSCode!
+   - Configure Git User Name:
 
-   
-That's it! Now you have Git installed on Windows and GitHub integrated with your Visual Studio Code. Happy coding!
+```bash
+git config --global user.name "Your Name"
+```
+
+Replace "Your Name" with your actual name. This doesn’t have to be your real name; it can be any name you choose to associate with your commits (e.g., a username).
+
+Configure Git User Email:
+
+```bash
+git config --global user.email "youremail@example.com"
+```
+
+Replace "youremail@example.com" with the email you've used for your GitHub account (or any other email you wish to use).
+
+Verify the Configuration:
+To ensure the values were set correctly, you can use the following commands:
+
+```bash
+git config --global user.name   # This will display the configured name
+git config --global user.email  # This will display the configured email
+```
+
+Proceed with Your Operations: After setting up the name and email, you can proceed with your git add, git commit, and git push operations.
