@@ -35,9 +35,11 @@ git init
  - Create a test file index.js with some code
  - then "git add ." , then use the Commit/Push button to push the file
 
-If you have the error <br> : 
+If you have the error : <br>  
 
+```
 Make sure you configure "user.name" and "user.email" in Git
+```
 
 Follow these steps : 
 
